@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Basic&display=swap");
+:root {
+  --gutter: 10px;
+  --primary-night: #ffa500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: 1s all ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body.dark {
+  background-color: #110023;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../gifs/thundercloud.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  position: relative;
+  background-position: center center;
+}
+
+body.light {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../gifs/thundercloud.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  position: relative;
+  background-position: center center;
+}
+
+header {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--gutter);
+  color: var(--primary-night);
+}
+header > h1 {
+  font-family: "Basic", sans-serif;
+  font-weight: bolder;
+  line-height: 1.2;
+  font-size: 1.1rem;
+}
+header > *:last-child {
+  padding-block: 10px;
+  background-color: none;
+  flex-basis: 20%;
+}
+
+main {
+  max-width: 100%;
+  height: 500px;
+  color: var(--primary-night);
+  margin: var(--gutter);
+  margin-block: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+main > div.intro > * {
+  margin: 1rem;
+}
+main > div.intro > h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+main > div.intro > h1.main-heading {
+  width: 100% !important;
+}
+main > div.intro > img {
+  transform: scale(0.8) !important;
+  position: absolute;
+  display: block;
+  margin: -2.5rem 3.6rem;
+  animation: zoomin 1.7s linear 0.1s infinite alternate;
+}
+@media screen and (max-width: 570px) {
+  main > div.intro > img {
+    display: block;
+    margin: -2.5rem 3.6rem;
+  }
+}
+main > div.intro > p {
+  text-align: center;
+}
+main > div.intro > .location-description {
+  margin-top: 3rem;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 570px) {
+  header > * {
+    margin: 0 auto;
+  }
+  header > *:last-child {
+    flex-basis: 25%;
+  }
+}
+@media screen and (max-width: 500px) {
+  header > *:last-child {
+    flex-basis: 70%;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  header > *:last-child {
+    flex-basis: 100%;
+    margin-top: 1rem;
+  }
+}
+header > *:last-child > input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--primary-night);
+  color: var(--primary-night);
+  height: max-content;
+  background-color: transparent !important;
+}
+header > *:last-child > input:focus {
+  border: none;
+  border-bottom: 2px solid var(--primary-night);
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: var(--primary-night) !important;
+  font-size: 0.8rem;
+}
+
+header > *:last-child > input:focus ::-webkit-input-placeholder {
+  color: blue !important;
+}
+
+::-ms-input-placeholder, ::-moz-input-placeholder, ::-o-input-placeholder {
+  color: var(--primary-night) !important;
+  font-size: 0.8rem;
+}
+
+::input-placeholder {
+  font-size: 0.7rem;
+  color: var(--primary-night) !important;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/*# sourceMappingURL=weather.css.map */
