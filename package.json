@@ -4,11 +4,17 @@
   "description": "",
   "main": "weather.js",
   "scripts": {
-    "compile:sass": "sass --watch sass:css/"
+    "compile:sass": "sass --watch sass:css/",
+    "compile:postcss" : "npx postcss --watch css/weather.css --use autoprefixer -d build/",
+    "dev" : "start npm run compile:sass && start npm run compile:postcss"
   },
   "author": "Code-Warlock",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.51.0"
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.51.0",
+    "sass-autoprefixer": "^1.0.1"
   }
 }
