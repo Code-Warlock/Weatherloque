@@ -5,7 +5,6 @@
 
 \:root
   --gutter: 10px
-  --primary-night: #ffa500
 
 *
   margin: 0
@@ -23,6 +22,7 @@ body.dark
   background-repeat: no-repeat
   background-size: cover
   background-blend-mode: hard-light
+  --primary-night: #ffa500
   position: relative
   background-position: center center
 
@@ -32,9 +32,15 @@ body.light
   background-image: url(../gifs/thundercloud.gif)
   background-repeat: no-repeat
   background-size: cover
-  background-blend-mode: hard-light
+  background-blend-mode: soft-light
+  --primary-night : #110023
   position: relative
   background-position: center center
+
+svg.dark path
+  fill: #110023
+svg.light path
+  fill: orange
 
 header
   max-width: 100%
@@ -79,7 +85,7 @@ main
         text-align: center
       h1.main-heading
         width: 100% !important
-      img
+      img , svg
         transform: scale(.8) !important
         position: absolute
         display: block
@@ -127,19 +133,13 @@ header > *:last-child > input
     border-bottom: 2px solid var(--primary-night)
     outline: none
 
-\::-webkit-input-placeholder
-  color: var(--primary-night) !important
-  font-size: .8rem
 
 header > *:last-child > input:focus ::-webkit-input-placeholder
   color: blue !important
 
-\::-ms-input-placeholder, ::-moz-input-placeholder, ::-o-input-placeholder
-  color: var(--primary-night) !important
-  font-size: .8rem
 
-\::input-placeholder
-  font-size: .7rem
+::input-placeholder , ::-webkit-input-placeholder , ::-moz-placeholder , ::-ms-input-placeholder , ::placeholder
+  font-size: .8rem
   color: var(--primary-night) !important
 
 // @keyframes zoom

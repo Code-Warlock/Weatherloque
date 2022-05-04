@@ -11,7 +11,6 @@
  */
 :root {
   --gutter: 10px;
-  --primary-night: #ffa500;
 }
 
 * {
@@ -24,13 +23,14 @@
 }
 
 body.dark {
-  background-color: green;
+  background-color: #110023;
   width: 100vw;
   height: 100vh;
   background-image: url(../gifs/thundercloud.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: hard-light;
+  --primary-night: #ffa500;
   position: relative;
   background-position: center center;
 }
@@ -41,9 +41,18 @@ body.light {
   background-image: url(../gifs/thundercloud.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: hard-light;
+  background-blend-mode: soft-light;
+  --primary-night: #110023;
   position: relative;
   background-position: center center;
+}
+
+svg.dark path {
+  fill: #110023;
+}
+
+svg.light path {
+  fill: orange;
 }
 
 header {
@@ -88,7 +97,7 @@ main > div.intro > h1 {
 main > div.intro > h1.main-heading {
   width: 100% !important;
 }
-main > div.intro > img {
+main > div.intro > img, main > div.intro > svg {
   transform: scale(0.8) !important;
   position: absolute;
   display: block;
@@ -96,7 +105,7 @@ main > div.intro > img {
   animation: zoomin 1.7s linear 0.1s infinite alternate;
 }
 @media screen and (max-width: 570px) {
-  main > div.intro > img {
+  main > div.intro > img, main > div.intro > svg {
     display: block;
     margin: -2.5rem 3.6rem;
   }
@@ -150,7 +159,7 @@ header > *:last-child > input:focus ::-webkit-input-placeholder {
   color: blue !important;
 }
 
-::input-placeholder {
+::input-placeholder, ::-webkit-input-placeholder, ::-moz-placeholder, ::-ms-input-placeholder, ::placeholder {
   font-size: 0.8rem;
   color: var(--primary-night) !important;
 }

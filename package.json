@@ -2,10 +2,10 @@
   "name": "weather",
   "version": "1.0.0",
   "description": "",
-  "main": "weather.js",
+  "main": "script.js",
   "scripts": {
-    "compile:sass": "sass --watch sass:css/",
-    "compile:postcss" : "npx postcss --watch css/weather.css --use autoprefixer -d build/",
+    "compile:sass": "sass --watch sass:src/",
+    "compile:postcss" : "npx postcss --watch src/weather.css --use autoprefixer -d build/",
     "dev" : "start npm run compile:sass && start npm run compile:postcss"
   },
   "author": "Code-Warlock",
