@@ -1,6 +1,6 @@
 class Weather{
   constructor(url , location){
-    this.key =  "GGx8yZ9e7jRSDc5AXXawq6c0A8a5R5QW";
+    this.key =  "WnQ6jf7cy3trNovRyRqChF6JLfqGni1c";
     this.url = url;
     this.location = location;
   };
